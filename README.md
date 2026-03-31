@@ -76,7 +76,6 @@ make re
 Additional notes:
 - The repository also provides a `make rapide` target for a quieter build.
 - The build links against `readline` with `-lreadline`.
-- In its current form, the project includes `<linux/limits.h>`, so a Linux environment is the safest target. On my current macOS check, `make rapide` stops on that missing header.
 
 ---
 
@@ -148,9 +147,6 @@ This repository is clearly organized around the 42 Minishell project scope:
 - relies on manual memory management
 - uses GNU Readline for the prompt layer
 
-Note:
-- The subject PDF is not included in the repository, so this README describes the implemented codebase and does not claim line-by-line validation against every evaluation rule.
-
 ---
 
 ## 🧪 Testing
@@ -177,10 +173,6 @@ EOF
 ```bash
 valgrind --leak-check=full --track-fds=yes ./minishell
 ```
-
-Testing notes:
-- I did not find an automated test suite or a dedicated `tests/` directory in this repository.
-
 ---
 
 ## 📖 What I Learned
@@ -195,7 +187,7 @@ This kind of project helps improve in the following areas:
 
 ## 🚧 Possible Improvements
 
-Although the repository already covers the core minishell mechanics, several improvements are possible:
+Although the project already covers the core minishell mechanics, several improvements are possible:
 - replace Linux-specific headers with a more portable alternative
 - add an automated regression test suite
 - extend the parser to support more shell grammar features
